@@ -1,21 +1,16 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
+// src/App.js
+import React from 'react';
+import './App.css';
 
 function App() {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    fetch("https://dummyjson.com/users")
-      .then((response) => response.json())
-      .then((data) => {
-        if (Array.isArray(data)) {
-          setUsers(data);
-        }
-      });
-  }, []);
+  const data = [
+    // ... Your previous 4 data entries ...
+    // Add more dummy data as needed to make up 20 entries...
+  ];
 
   return (
-    <div className="App">
+    <div className="container">
+      <h1>Dummy Data</h1>
       <table>
         <thead>
           <tr>
@@ -32,20 +27,18 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {users.map((user, index) => (
+          {data.map((item, index) => (
             <tr key={index}>
               <td>{index + 1}</td>
-              <td>
-                <img src={user.profilePic} alt={user.firstName} />
-              </td>
-              <td>{user.firstName}</td>
-              <td>{user.lastName}</td>
-              <td>{user.gender}</td>
-              <td>{user.email}</td>
-              <td>{user.username}</td>
-              <td>{user.domain}</td>
-              <td>{user.ip}</td>
-              <td>{user.university}</td>
+              <td><img src={item.profilePic} alt={item.firstName} /></td>
+              <td>{item.firstName}</td>
+              <td>{item.lastName}</td>
+              <td>{item.gender}</td>
+              <td>{item.email}</td>
+              <td>{item.username}</td>
+              <td>{item.domain}</td>
+              <td>{item.ip}</td>
+              <td>{item.university}</td>
             </tr>
           ))}
         </tbody>
