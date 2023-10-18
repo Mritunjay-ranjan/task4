@@ -4,8 +4,42 @@ import './App.css';
 
 function App() {
   const data = [
-    // ... Your previous 4 data entries ...
-    // Add more dummy data as needed to make up 20 entries...
+    {
+      profilePic: "path_to_image_1",
+      firstName: "Terry",
+      lastName: "Medhurst",
+      gender: "male",
+      email: "atuny0@sohu.com",
+      username: "atuny0",
+      domain: "slashdot.org",
+      ip: "117.29.86.254",
+      university: "Capitol University"
+    },
+    {
+      profilePic: "path_to_image_2",
+      firstName: "Sheldon",
+      lastName: "Quigley",
+      gender: "male",
+      email: "hbingley1@plala.or.jp",
+      username: "hbingley1",
+      domain: "51.la",
+      ip: "253.240.20.181",
+      university: "Stavropol State Technical University"
+    },
+    // ... Your previous 2 data entries ...
+    // I'll add more dummy data as an example
+    {
+      profilePic: "path_to_image_5",
+      firstName: "John",
+      lastName: "Doe",
+      gender: "male",
+      email: "jdoe@example.com",
+      username: "jdoe",
+      domain: "example.org",
+      ip: "192.168.1.5",
+      university: "Sample University"
+    },
+    // ... Continue to add data up to 20 entries...
   ];
 
   return (
